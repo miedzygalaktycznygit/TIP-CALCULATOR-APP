@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "my-font";
+  src: url("/Fonts/SpaceMono-Bold.ttf");
+}
+@font-face {
+  font-family: "my-font2";
+  src: url("/Fonts/SpaceMono-Regular.ttf");
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "my-font";
+  background-color: hsl(185, 41%, 84%);
+  font-weight: 300;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#container {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  flex-wrap: wrap;
+}
+#container #title {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100vw;
+  height: 25vh;
+  align-items: flex-end;
+}
+#container #title h1 {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 10rem;
+  letter-spacing: 1rem;
+  padding-bottom: 1rem;
+  color: hsl(183, 100%, 15%);
+}
+#container main {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100vw;
+  height: 75vh;
+}
+#container main #calculator {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 47rem;
+  height: 26rem;
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 3rem;
+  border-radius: 1rem;
+  align-items: center;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+#container main #calculator #inputs {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 45%;
+  height: 90%;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  flex-wrap: wrap;
+}
+#container main #calculator #inputs #bill {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 30%;
+  flex-wrap: wrap;
+  text-align: left;
+  padding-top: 1rem;
+}
+#container main #calculator #inputs #bill label {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: hsl(186, 14%, 43%);
+}
+#container main #calculator #inputs #bill input[type=number]::-webkit-inner-spin-button,
+#container main #calculator #inputs #bill input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#container main #calculator #inputs #bill input[type=number] {
+  -moz-appearance: textfield;
+}
+#container main #calculator #inputs #bill input {
+  all: unset;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.144);
+  text-align: right;
+  padding-right: 1rem;
+  color: hsl(183, 100%, 15%);
+  font-size: 1.1rem;
+  background-image: url("/images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: center left 1rem;
+}
+#container main #calculator #inputs #bill input:focus {
+  border: 0.2rem solid hsl(185, 41%, 84%);
+}
+#container main #calculator #inputs #tip {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 40%;
+  flex-wrap: wrap;
+}
+#container main #calculator #inputs #tip label {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: hsl(186, 14%, 43%);
+  text-align: left;
+}
+#container main #calculator #inputs #tip #tip-buttons {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#container main #calculator #inputs #tip #tip-buttons button {
+  width: 30%;
+  height: 2.5rem;
+  border: none;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+}
+#container main #calculator #inputs #tip #tip-buttons button:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+#container main #calculator #inputs #tip #tip-buttons input[type=number]::-webkit-inner-spin-button,
+#container main #calculator #inputs #tip #tip-buttons input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#container main #calculator #inputs #tip #tip-buttons input[type=number] {
+  -moz-appearance: textfield;
+}
+#container main #calculator #inputs #tip #tip-buttons input {
+  all: unset;
+  width: 30%;
+  height: 2.5rem;
+  background-color: rgba(128, 128, 128, 0.144);
+  border-radius: 0.2rem;
+  color: hsl(183, 100%, 15%);
+}
+#container main #calculator #inputs #tip #tip-buttons input::-moz-placeholder {
+  color: hsl(186, 14%, 43%);
+  font-size: 1.2rem;
+}
+#container main #calculator #inputs #tip #tip-buttons input::placeholder {
+  color: hsl(186, 14%, 43%);
+  font-size: 1.2rem;
+}
+#container main #calculator #inputs #tip #tip-buttons input:focus {
+  border: 0.2rem solid hsl(185, 41%, 84%);
+  width: 5.95rem;
+  height: 2.1rem;
+}
+#container main #calculator #inputs #people {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 30%;
+  flex-wrap: wrap;
+  text-align: left;
+  padding-top: 1rem;
+}
+#container main #calculator #inputs #people label {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: hsl(186, 14%, 43%);
+}
+#container main #calculator #inputs #people input[type=number]::-webkit-inner-spin-button,
+#container main #calculator #inputs #people input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#container main #calculator #inputs #people input[type=number] {
+  -moz-appearance: textfield;
+}
+#container main #calculator #inputs #people input {
+  all: unset;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.144);
+  text-align: right;
+  padding-right: 1rem;
+  color: hsl(183, 100%, 15%);
+  font-size: 1.1rem;
+  background-image: url("/images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: center left 1rem;
+}
+#container main #calculator #inputs #people input:focus {
+  border: 0.2rem solid hsl(185, 41%, 84%);
+}
+#container main #calculator #results {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 45%;
+  height: 90%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1rem;
+}/*# sourceMappingURL=style.css.map */
