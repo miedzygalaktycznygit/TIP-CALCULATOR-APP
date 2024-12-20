@@ -1,4 +1,5 @@
 $Very_dark_cyan: hsl(183, 100%, 15%);
+$Strong_cyan: hsl(172, 67%, 45%);
 $Dark_grayish_cyan: hsl(186, 14%, 43%);
 $Grayish_cyan: hsl(184, 14%, 56%);
 $Light_grayish_cyan: hsl(185, 41%, 84%);
@@ -141,7 +142,7 @@ $White: hsl(0, 0%, 100%);
                       font-size: 1.2rem;
                     }
                     button:hover{
-                      background-color: $Light_grayish_cyan;
+                      background-color: $Strong_cyan;
                       color: $Very_dark_cyan;
                     }
                     input[type="number"]::-webkit-inner-spin-button,
@@ -210,9 +211,51 @@ $White: hsl(0, 0%, 100%);
                 }
             }
             #results{
-                @include fFlexbox(90%, 45%, row);
-                background-color: $Very_dark_cyan;
-                border-radius: 1rem;
+              @include fFlexbox(90%, 45%, column);
+              background-color: $Very_dark_cyan;
+              border-radius: 1rem;
+              row-gap: 3rem;
+              #tip-amount{
+                @include fFlexbox(3rem, 100%, row);
+                column-gap: 4rem;
+                .data{
+                  text-align: left;
+                  color: $White;
+                  .text1{
+                    color: $Grayish_cyan;
+                  }
+                }
+                #tip-amount-value{
+                  font-size: 2.5rem;
+                  color: $Strong_cyan;
+                }
+              }  
+              #total-amount{
+                @include fFlexbox(3rem, 100%, row);
+                column-gap: 5rem;
+                .data2{
+                  text-align: left;
+                  color: $White;
+                  .text2{
+                    color: $Grayish_cyan;
+                  }
+                }
+                #total-amount-value{
+                  font-size: 2.5rem;
+                  color: $Strong_cyan;
+                }
+              }
+              #reset{
+                @include fFlexbox(3rem, 90%, row);
+                border: none;
+                background-color: $Strong_cyan;
+                color: $Very_dark_cyan;
+                border-radius: 0.2rem;
+                font-size: 1.2rem;
+                margin-left: 1rem;
+                margin-top: 2rem;
+                align-items: center;
+              }
             }
         }
     }
