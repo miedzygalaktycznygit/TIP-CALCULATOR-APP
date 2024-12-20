@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
         button.addEventListener('click', function(){
             console.log('button clicked');
             if (button.dataset.clicked === 'false') {
-                button.style.backgroundColor = 'hsl(185, 41%, 84%)';
+                button.style.backgroundColor = 'hsl(172, 67%, 45%)';
                 button.style.color = 'hsl(183, 100%, 15%)';
                 button.dataset.clicked = 'true';
             } else {
@@ -17,4 +17,17 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log(button.dataset.clicked);
         });
     });
+
+    const activationButton = document.getElementById('reset');
+    const ifInput = document.getElementById('bill-amount'); 
+    
+    ifInput.addEventListener('input', function () {
+        const inputValue = parseFloat(ifInput.value); 
+        if (inputValue > 0) {
+            activationButton.style.backgroundColor = "red";
+        } else {
+            activationButton.style.backgroundColor = "grey";
+        }
+    });
+
 });
