@@ -180,7 +180,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
 }
 #container main #calculator #inputs #tip #tip-buttons button:hover {
-  background-color: hsl(185, 41%, 84%);
+  background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
 #container main #calculator #inputs #tip #tip-buttons input[type=number]::-webkit-inner-spin-button,
@@ -256,7 +256,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border: 0.2rem solid hsl(185, 41%, 84%);
 }
 #container main #calculator #results {
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   display: flex;
@@ -264,4 +264,63 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 90%;
   background-color: hsl(183, 100%, 15%);
   border-radius: 1rem;
+  row-gap: 3rem;
+}
+#container main #calculator #results #tip-amount {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+#container main #calculator #results #tip-amount .data {
+  text-align: left;
+  color: hsl(0, 0%, 100%);
+}
+#container main #calculator #results #tip-amount .data .text1 {
+  color: hsl(184, 14%, 56%);
+}
+#container main #calculator #results #tip-amount #tip-amount-value {
+  font-size: 2.5rem;
+  color: hsl(172, 67%, 45%);
+}
+#container main #calculator #results #total-amount {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+#container main #calculator #results #total-amount .data2 {
+  text-align: left;
+  color: hsl(0, 0%, 100%);
+}
+#container main #calculator #results #total-amount .data2 .text2 {
+  color: hsl(184, 14%, 56%);
+}
+#container main #calculator #results #total-amount #total-amount-value {
+  font-size: 2.5rem;
+  color: hsl(172, 67%, 45%);
+}
+#container main #calculator #results #reset {
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 90%;
+  height: 3rem;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
