@@ -56,7 +56,7 @@ $White: hsl(0, 0%, 100%);
     flex-wrap: wrap;
 
     #title{
-        @include fFlexbox(25vh, 100vw, row);
+        @include fFlexbox(10rem, 100vw, row);
         align-items: flex-end;
         h1{
             height: fit-content;
@@ -217,7 +217,7 @@ $White: hsl(0, 0%, 100%);
               row-gap: 3rem;
               #tip-amount{
                 @include fFlexbox(3rem, 100%, row);
-                column-gap: 4rem;
+                column-gap: 0rem;
                 .data{
                   text-align: left;
                   color: $White;
@@ -227,12 +227,14 @@ $White: hsl(0, 0%, 100%);
                 }
                 #tip-amount-value{
                   font-size: 2.5rem;
+                  width: 12rem;
                   color: $Strong_cyan;
+                  text-align: right;
                 }
               }  
               #total-amount{
                 @include fFlexbox(3rem, 100%, row);
-                column-gap: 5rem;
+                column-gap: 0rem;
                 .data2{
                   text-align: left;
                   color: $White;
@@ -241,14 +243,16 @@ $White: hsl(0, 0%, 100%);
                   }
                 }
                 #total-amount-value{
+                  width: 13rem;
                   font-size: 2.5rem;
                   color: $Strong_cyan;
+                  text-align: right;
                 }
               }
               #reset{
                 @include fFlexbox(3rem, 90%, row);
                 border: none;
-                background-color: $Strong_cyan;
+                background-color: $Dark_grayish_cyan;
                 color: $Very_dark_cyan;
                 border-radius: 0.2rem;
                 font-size: 1.2rem;
@@ -258,5 +262,37 @@ $White: hsl(0, 0%, 100%);
               }
             }
         }
+    }
+  }
+
+  @media (max-width: 768px){
+    #container{
+      min-height: fit;
+      main{
+        min-width: 26rem;
+        #calculator{
+          @include fFlexbox(55rem, 26rem, column);
+          #inputs{
+            @include fFlexbox(50%, 90%, row);  
+             #tip{
+              #tip-buttons{
+                button{
+                  width: 40%;
+                }
+                input{
+                  width: 40%;
+                }
+                input:focus{
+                  width: 38.5%;
+                }
+              }
+            }
+            
+          }
+          #results{
+            @include fFlexbox(45%, 90%, column);
+          }
+        }
+      }
     }
   }
